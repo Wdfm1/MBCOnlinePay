@@ -1,0 +1,50 @@
+﻿Imports MySql.Data.MySqlClient
+
+Partial Class index
+    Inherits System.Web.UI.Page
+
+    Protected Sub InsertSyslog()
+        '0,0=Browser
+        '01=platform
+        '02=  IP Address
+        '03= Pament Page first access Datetime
+        '04= submit button clicked Datetime
+
+
+        Try
+
+
+            Dim strconn As String
+            strconn = cust11.ConnectionString    '"Server=databases;User id=root;Password=3l3phant1;Persist Security Info=True;Database=mbc"
+            Dim conn As MySqlConnection = New MySqlConnection(strconn)
+            Dim cmd As New MySqlCommand("", conn)
+
+            cmd.Parameters.AddWithValue("@page", "Index.aspx")
+            cmd.Parameters.AddWithValue("@platform", Context.Request.Browser.Platform.ToString)
+            cmd.Parameters.AddWithValue("@browser", Context.Request.Browser.Browser & " " & Request.Browser.Version)
+            cmd.Parameters.AddWithValue("@ipaddress", Context.Request.UserHostAddress)
+            cmd.Parameters.AddWithValue("@pfatime", DateTime.Parse(DateTime.Now.ToString()))
+
+
+            cmd.CommandText = "Insert into mbc.syslog (page,browser,platform,ipaddress,pfatime) Values(@page,@browser,@platform,@ipaddress,@pfatime);"
+            Try
+                cmd.Connection.Open()
+                cmd.ExecuteNonQuery()
+                cmd.Connection.Close()
+            Catch ex As Exception
+
+            End Try
+        Catch ex As Exception
+
+        End Try
+
+
+
+    End Sub
+
+    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        If Not IsPostBack Then
+            InsertSyslog()
+        End If
+    End Sub
+End Class

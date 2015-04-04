@@ -1,0 +1,150 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="index.aspx.vb" Inherits="index" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700italic,600italic,400italic,300italic,200italic,200,600,300,700,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Exo:400,800,900' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+    function DM_redirect(MobileURL, Home) {
+        try {
+            // avoid loops within mobile site
+            if (document.getElementById("dmRoot") != null) {
+                return;
+            }
+            var CurrentUrl = location.href
+            var noredirect = document.location.search;
+            if (noredirect.indexOf("no_redirect=true") < 0) {
+                if ((navigator.userAgent.match(/(iPhone|iPod|BlackBerry|Android.*Mobile|BB10.*Mobile|webOS|Windows CE|IEMobile|Opera Mini|Opera Mobi|HTC|LG-|LGE|SAMSUNG|Samsung|SEC-SGH|Symbian|Nokia|PlayStation|PLAYSTATION|Nintendo DSi)/i))) {
+                    if (Home) {
+                        location.replace(MobileURL);
+                    } else {
+                        location.replace(MobileURL + "?url=" + encodeURIComponent(CurrentUrl) + "&utm_referrer=" + document.referrer);
+                    }
+                }
+            }
+        }
+        catch (err) { }
+    }
+</script>
+<script type="text/javascript">
+    DM_redirect("http://m.memorybook.com");
+</script>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Yearbook Marketing Materials Order Form | Yearbook Samples</title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+<meta name="Keywords" content="yearbook samples, yearbook marketing materials" />
+<meta name="Description" content="Try Memory Book Company's marketing materials and yearbook samples to help promote your yearbook around school, camp, or anywhere." />
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" 
+content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" 
+content="text/css">
+
+<link href="../style_sheets/main_styles.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../scripts/jquery.min.js"> </script>
+
+
+<meta name="google-site-verification" content="4GdzUeel_MC79xAmdK54pS00fitII_NMmYBQsSoAHrc" />
+<!-- START HEAD CODE SNIPPET -->
+<!--#include file="../includes/heatmap.html" -->
+<!-- END HEAD CODE SNIPPET -->
+</head>
+<body background="../images/background.jpg">
+    <form id="form1" runat="server">
+    <div id="page">
+    <div id="Div1">
+ 
+<!-- InstanceBeginEditable name="ACCORD" --><!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="GRAPHIC" -->
+<div id="secondary_page_graphic_wide"><img src="../images/oline_pay.jpg" width="250" height="199" alt="Online Yearbook Payment" align="right" style="margin-top:15px"></div>
+<!-- InstanceEndEditable -->
+
+
+<!-- START HEAD NAVIGATION SECTION -->
+<!--#include file="../includes/top-menu.html" -->
+<!-- END HEAD NAVIGATION SECTION -->
+
+
+<div class="swoosh_container">
+<!-- InstanceBeginEditable name="Breadcrumb" -->
+<div id="breadCrumb">
+<div xmlns:v="http://rdf.data-vocabulary.org/#">
+   <span typeof="v:Breadcrumb">
+     <a href="http://www.memorybook.com" rel="v:url" property="v:title">
+      <strong>Home</strong></a> &#8250;
+   </span>Online Pay
+      
+</div>
+</div>
+<div style="clear:left"></div>
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="Headline" -->
+<h1 class="col_one_INT_HEADLINE">Online Pay for Yearbooks</h1>
+<!-- InstanceEndEditable -->
+</div>
+<div class="landing_pages_wrapper">
+<!-- InstanceBeginEditable name="Landing_Page_Markers" -->
+<div class="landing_page_pod1">
+<div id="pod_OPay">
+<a href="http://www.memorybook.com/online-pay/Default1.aspx" title="Parent Online Payment" target="_blank" id="pod_OPay"><span>Parent Online Payment</span></a>
+</div>
+</div>
+<div class="landing_page_pod2">
+<div id="pod_SchPay">
+<a href="http://www.memorybook.com/online-pay/Default.aspx" title="School Online Payment" target="_blank" id="pod_SchPay"><span>School Online Payment</span></a>
+</div>
+</div>
+<div class="landing_page_pod1">
+<div id="pod_OPay">
+<a href="http://www.memorybook.com/online-pay/login.aspx" title="Advisor Login" target="_blank" id="adivsorLogin"><span>Parent Online Payment</span></a>
+</div>
+</div>
+<!-- InstanceEndEditable -->
+<div style="clear:both"></div>
+</div>
+ <!-- InstanceBeginEditable name="Body_Copy" -->
+<div class="body_copy_container_Fullwidth"><h2><img src="../images/index_spacer.jpg" width="260" height="100" align="right">Online Pay for Parents is Safe, Convenient and Easy!</h2><br>
+<br>
+Advisors everywhere agree: collecting money and tracking yearbook orders can be a hassle! With Memory Book Company&#8217;s new program, you can offer parents the convenience and safety of ordering school yearbooks online 24 hours a day. There&#8217;s no cost to your school, and it&#8217;s easy to get started. Talk to a sales representative today.<br>
+<br>
+<strong>Step 1:</strong> Determine your yearbook price and ordering timeframe. You can even set up multiple deadlines to spur sales throughout the year.<br>
+<br>
+<strong>Step 2:</strong> We&#8217;ll send you English or Spanish flyers to hand out to parents or to display on your website. The flyers direct parents to Memory Book&#8217;s website for ordering, explain what codes to enter, and include price and deadline information. And we can provide a banner for your school&#8217;s website that will link your parents directly to the MBC online pay site.<br>
+<br>
+<strong>Step 3:</strong> Reports will be available throughout the year so advisors know which students have purchased school yearbooks online. A final report will be sent two weeks before your production deadline.<br>
+<br>
+<h2>School Memory Book Online Pay</h2><br>
+Your school can now provide full payment for your school memory books online using our new secure portal. It&#8217;s fast, easy and safe. Just click on the Online School Pay link above. Enter your school code, and then pay by credit card or e-check. </div>
+ <!-- InstanceEndEditable -->
+<div style="clear:both"></div>
+<div class="orange_spacer">
+    <asp:SqlDataSource ID="cust11" runat="server" 
+        ConnectionString="<%$ ConnectionStrings:mbcConnectionString %>" 
+        ProviderName="<%$ ConnectionStrings:mbcConnectionString.ProviderName %>">
+    </asp:SqlDataSource>
+        </div>
+
+<!--START FOOTER NAVIGATION-->
+<!--#include file="../includes/menu.html" -->
+<!--END FOOTER NAVIGATION-->
+
+
+<!-- Start of Async HubSpot Analytics Code -->
+    <script type="text/javascript">
+        (function (d, s, i, r) {
+            if (d.getElementById(i)) { return; }
+            var n = d.createElement(s), e = d.getElementsByTagName(s)[0];
+            n.id = i; n.src = '//js.hubspot.com/analytics/' + (Math.ceil(new Date() / r) * r) + '/306026.js';
+            e.parentNode.insertBefore(n, e);
+        })(document, "script", "hs-analytics", 300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+    </div>
+    </form>
+</body>
+<!-- InstanceEnd --></html>

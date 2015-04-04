@@ -1,0 +1,35 @@
+<license>
+    <licenseId>5042680757</licenseId>
+    <licensee></licensee>
+    <allow>
+        <add type="Menu" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="SlideMenu" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="TabStrip" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="TreeView" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="MultiPage" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="Calendar" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="Callback" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="AJAXUploader" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="Dialog" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="Splitter" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="MaskedEdit" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="Grid" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="ColorPicker" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="SpellChecker" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="Editor" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="ImageZoom" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="Downloader" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="Floater" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="Slide" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="Flyout" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="EditableLabel" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="ListBox" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="ComboBox" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="Captcha" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="ToolTip" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="Rating" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+        <add type="Slider" version="10.0" host="JOSTENSKINDERKRAFT.COM" />
+    </allow>
+    <orderInfo date="2/27/2013" version="10" />
+    <signature>lJWOpGgCtXy2z97b6pkqpQ==</signature>
+</license>
