@@ -1,0 +1,351 @@
+.Text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: 12pt;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+}
+.Text_Bullit {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: 12pt;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+	list-style-position: outside;
+	list-style-type: disc;
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.Text_Button_MarginTop {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: 12pt;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+	margin-top: 10px;
+}
+.Text_Button_blue {
+	font-family: "Titillium Web";
+	font-size: 10pt;
+	line-height: 12pt;
+	color: #FFF;
+	margin-top: 92px;
+	background-color: #053E69;
+	font-weight: bold;
+}
+
+
+.oddlink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #00F;
+	text-decoration: underline;
+	margin-bottom: 2pt;
+	float: left;
+	width: 160px;
+	padding-left: 0px;
+	position: absolute;
+	right: 0px;
+}
+.whitelink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: 13pt;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFF;
+	text-decoration: none;
+}
+a:link {
+
+
+
+
+}
+a:visited {
+
+
+}
+a:hover {
+	color: #D2232A;
+}
+a:active {
+
+
+}
+h2 {
+	font-size: 12pt;
+	color: #FFF;
+	text-decoration: underline;
+}
+h3 {
+	font-size: 9pt;
+	color: #FFF;
+}
+h4 {
+	font-size: 10pt;
+	color: #000;
+	font-style: normal;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 12pt;
+	text-decoration: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-bottom: -10px;
+}
+h5 {
+	font-size: 16pt;
+	color: #C00;
+	font-style: normal;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 18pt;
+	text-decoration: none;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-left: 20px;
+	margin-top: 0px;
+}
+
+.footer {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-style: normal;
+	line-height: 11pt;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+	
+}
+.footer2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-style: normal;
+	line-height: 11pt;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFF;
+	text-decoration: none;
+}
+.footerlinknocolor2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-style: normal;
+	line-height: 11pt;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.footer_more_leading {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-style: normal;
+	line-height: 18pt;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+}
+.footerlinknocolor {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-style: normal;
+	line-height: 11pt;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: underline;
+}
+
+
+.small {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7pt;
+	font-style: normal;
+	line-height: 9px;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+	margin-top: 0px;
+	margin-bottom: 2px;
+}
+.headline {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-style: normal;
+	line-height: 18pt;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+}
+.whitelinkCopy {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: 13pt;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFF;
+	text-decoration: underline;
+}
+.headline24pt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24pt;
+	font-style: normal;
+	line-height: 26pt;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #C00;
+	text-decoration: none;
+}
+.Textlink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: 12pt;
+	font-weight: normal;
+	color: #00C;
+	text-decoration: underline;
+}
+.Textlink_GRAY {
+	font-family: "Titillium Web";
+	font-size: 12px;
+	font-style: normal;
+	line-height: 15px;
+	font-weight: bold;
+	color: #333;
+	text-decoration: underline;
+}
+
+.Textlink_less_linespace {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: 9pt;
+	font-weight: normal;
+	color: #00C;
+	text-decoration: underline;
+}
+
+.Text10boldwhite {
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	line-height: 12pt;
+	color: #FFF;
+}
+.textcolorred {
+	color: #C00;
+}
+.textcolorblue {
+	color: #36F;
+}
+
+.textcolorgreen {
+	color: #393;
+}
+.textcolorsage {
+	color: #CC0;
+}
+.textcolororange {
+	color: #F60;
+}
+.headlinelink {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-style: normal;
+	line-height: 18pt;
+	font-weight: normal;
+	color: #00C;
+	text-decoration: underline;
+}
+
+.Text9pt {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+	line-height: 11pt;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+}.headlineRed {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16pt;
+	font-style: normal;
+	line-height: 20pt;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #C00;
+	text-decoration: none;
+}
+.Text9ptRED {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	font-style: normal;
+	line-height: 10pt;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #C00;
+	text-decoration: none;
+}
+.TextTable {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-style: normal;
+	line-height: 10pt;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+	vertical-align: middle;
+}
+.Text8pt {
+	font-size: 8pt;
+	font-style: normal;
+	line-height: 9pt;
+	font-weight: normal;
+	color: #000;
+}
+p {
+	margin-top: 0px;
+	margin-bottom: 10px;
+}

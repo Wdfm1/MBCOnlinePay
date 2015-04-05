@@ -1,0 +1,35 @@
+<license>
+    <licenseId>5042680757</licenseId>
+    <licensee></licensee>
+    <allow>
+        <add type="Menu" version="11.0" />
+        <add type="SlideMenu" version="11.0" />
+        <add type="TabStrip" version="11.0" />
+        <add type="TreeView" version="11.0" />
+        <add type="MultiPage" version="11.0" />
+        <add type="Calendar" version="11.0" />
+        <add type="Callback" version="11.0" />
+        <add type="AJAXUploader" version="11.0" />
+        <add type="Dialog" version="11.0" />
+        <add type="Splitter" version="11.0" />
+        <add type="MaskedEdit" version="11.0" />
+        <add type="Grid" version="11.0" />
+        <add type="ColorPicker" version="11.0" />
+        <add type="SpellChecker" version="11.0" />
+        <add type="Editor" version="11.0" />
+        <add type="ImageZoom" version="11.0" />
+        <add type="Downloader" version="11.0" />
+        <add type="Floater" version="11.0" />
+        <add type="Slide" version="11.0" />
+        <add type="Flyout" version="11.0" />
+        <add type="EditableLabel" version="11.0" />
+        <add type="ListBox" version="11.0" />
+        <add type="ComboBox" version="11.0" />
+        <add type="Captcha" version="11.0" />
+        <add type="ToolTip" version="11.0" />
+        <add type="Rating" version="11.0" />
+        <add type="Slider" version="11.0" />
+    </allow>
+    <orderInfo date="2/27/2013" version="10" />
+    <signature>oY7um+7hjN3KiX0YMozcbg==</signature>
+</license>
