@@ -1,0 +1,250 @@
+/* Add here all your CSS customizations */
+* {
+margin: 0;
+padding: 0;
+}
+
+.sideBar_CP {
+	background-image: url(../../images/contentBkgrdTest.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size:100%;
+}
+
+.content{
+	margin-top:45px;
+}
+
+.content .container{
+	margin-right:auto;
+	margin-left:auto;
+	padding-left:100px;
+	padding-right:15px}
+	
+.slider-cont_PAGES {
+	width:100%;
+	padding-top:2em
+}	
+
+.contentTEXT {
+	text-align:justify;
+	z-index:8000;
+}
+
+.contentTEXT a {
+	color: #960017;
+	font-family: "Shadows Into Light", cursive;
+	font-size: 1.3em;
+
+}
+
+.contentTEXT_COV {
+	padding-right:10%;
+	text-align:justify;
+	margin-top:em
+}
+
+aside.sidebar ul li {
+	z-index:9000;
+}
+
+.contentEXTRAmar {
+	margin-top:130px;	
+}
+
+.contentEXTRAmar60 {
+	margin-top:60px;	
+}
+.specOffbullits {
+	list-style-position: inside;
+	list-style-type: square;
+	padding-left:10px	
+}
+/*Smartphones (portrait and landscape --------------------- */
+	@media only screen
+	and (min-width:320px)
+	and (max-width:480px) {
+
+.content .container{
+	margin-right:auto;
+	margin-left:auto;
+	position:relative;
+}
+
+.contentTEXT {
+	max-width: 420px;
+	margin-left:10%;
+	margin-right:10%;
+	padding-right:20%;
+}
+
+.contentTEXT_COV {
+	padding-left:10%;
+}	
+
+.contentEXTRAmar {
+	margin-top:30px;	
+}		
+
+body {
+	background-image: none;
+}
+
+.slider-cont_PAGES {
+	max-height:80px;
+}
+
+.prod_smile {
+	display:none
+}
+
+#blop {
+	display:none
+}
+
+.fizwords {
+	font-size:1.75em;
+	text-align:right;
+	padding-right:20%
+}
+
+#breadCrumb {
+	display:none
+}
+
+aside.sidebar {
+	max-width: 420px;
+	margin-left:10%;
+	margin-right:10%;
+	padding-right:20%;
+}
+	}
+	@media only screen
+	and (min-width:481px)
+	and (max-width:767px) {
+
+.contentTEXT {
+	max-width: 760px;
+	margin-left:10%;
+	margin-right:10%;
+	padding-right:20%;
+}
+
+.contentEXTRAmar {
+	margin-top:30px;	
+}	
+
+.fizwords {
+	font-size:2em;
+	text-align:right;
+	padding-right:30%
+}	
+
+aside.sidebar {
+	max-width: 420px;
+	margin-left:10%;
+	margin-right:10%;
+	padding-right:20%;
+}	
+	}
+	
+/*iPad (portrait and landscape) --------------------- */
+	@media only screen
+	and (min-device-width : 768px)
+	and (max-device-width : 1024px) {
+
+.contentTEXT {
+	margin-left:10%;
+	margin-right:10%;
+	padding-right:10%;
+}
+
+.contentTEXT_COV {
+	padding-left:10%;
+}
+
+.contentEXTRAmar {
+	margin-top:30px;	
+}	
+	
+#header > .container {
+	width: 100%;
+}
+		
+#header {
+	width: 100%;
+}
+		
+#footer {
+	width: 100%;
+}
+#blop {
+	display:none
+}
+
+	}
+
+/*iPad (landscape) --------------------- */	
+	@media only screen
+	and (min-width:768px)
+	and (max-device-width:1024px)
+	and (orientation:landscape){
+
+.slider-container{
+	position:relative;
+	left:-5px;
+}
+		
+.content{
+	margin-top:15px;
+}
+
+.contentTEXT_COV {
+	padding-left:10%;
+}
+
+.contentEXTRAmar {
+	margin-top:30px;	
+}	
+
+#blop {
+	display:none
+}
+	}
+	
+/*iPad (portrait) --------------------- */	
+	@media only screen
+	and (min-width:768px)
+	and (max-device-width:1024px)
+	and (orientation:portrait){
+
+.contentTEXT_COV {
+	padding-left:10%;
+}
+
+.content{
+	margin-top:15px;
+}
+
+#blop {
+	display:none
+}
+
+	}
+
+/*Desktops and Laptops --------------------- */	
+	@media only screen 
+	and (min-width : 1224px) {
+
+.fizwords {
+	font-size:3.75em;
+	text-align:right;
+	padding-right:30%
+}
+	}
+
+/*Large Screens --------------------- */	
+	@media only screen 
+	and (min-width : 1824px) {
+
+	}
