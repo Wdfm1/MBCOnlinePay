@@ -6,31 +6,27 @@ Imports System.Web.UI.WebControls
 Imports System.Data
 Imports System.Net.Mail
 Imports System.Net
-
-
 Imports System.IO
 Imports System.Globalization
 Imports MySql.Data
 Imports MySql.Data.MySqlClient
 Partial Class ParentPayment
     Inherits System.Web.UI.Page
-
     Dim lbltotal As Label
     Protected Overrides Sub Render(ByVal writer As System.Web.UI.HtmlTextWriter)
 
-        'ClientScript.RegisterForEventValidation(GridView1.UniqueID.ToString)
         Dim shopcart As Cart = Session("Cart")
         SetTotal(shopcart.OrderId)
         MyBase.Render(writer)
 
     End Sub
     Protected Sub Page_Init(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Init
-
+        
 
     End Sub
-    Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
-        Page.Response.AppendHeader("Cache-Control", "no-store, no-cache, must-revalidate, post-check=0, pre-check=0")
+  Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        'Page.EnableViewState = False   
+ Page.Response.AppendHeader("Cache-Control", "no-store, no-cache, must-revalidate, post-check=0, pre-check=0")
         Page.MaintainScrollPositionOnPostBack = True
         If Not IsPostBack Then
             If IsNothing(Session("syslog")) Then
@@ -66,7 +62,7 @@ Partial Class ParentPayment
             Case "124581"
 
                 'code to call java script to hide/show divs
-                'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "ShowContenta", "ShowContent('shpinfo');", True)
+                ScriptManager.RegisterStartupScript(Me, Me.GetType(), "ShowContenta", "ShowContent('shpinfo');", True)
                 'Case Else
                 '    'code to call java script to hide/show divs
                 '    ScriptManager.RegisterStartupScript(Me, Me.GetType(), "HideContenta", "HideContent('shpinfo');", True)
@@ -88,7 +84,7 @@ Partial Class ParentPayment
             If ShopCart.basiconly = True Then
                 Me.basic.Items.Add("YEARBOOK")
                 Me.basic.SelectedValue = "YEARBOOK"
-                If ShopCart.LuvLine = True Then
+                If ShopCart.luvline = True Then
                     Me.basic.Items.Add("LUVLINE")
                 End If
                 'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "HideContenta", "HideContent('perstext');", True)
@@ -177,7 +173,7 @@ Partial Class ParentPayment
                     'lblicon4.Visible = False
                     'lblchooseicon.Visible = False
                     'Label15.Visible = False
-
+               
 
                 Else   'personal with out icons	(this line for schools that booked before the foil with out icon line was put in. Take out after year 15)
                     Me.basic.Items.Add("PERSONALIZED_YEARBOOK")
@@ -408,6 +404,7 @@ Partial Class ParentPayment
 	Protected Sub basic_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles basic.SelectedIndexChanged
         If Me.basic.SelectedValue = "YEARBOOK" Then
             dropdownenable(0)
+            perstext.Visible = False
             icontext.Visible = False
             icons.Visible = False
             txtperstext1.Enabled = False
@@ -474,11 +471,10 @@ Partial Class ParentPayment
 	Protected Sub Button1_Click(sender As Object, e As System.EventArgs) Handles Button1.Click
 		If CheckForOrder() Then	'true is duplicate an order was found ask customer if it is a duplicate
 			Dim a As String = Session("duporder")
-            'MsgBox1.Show("Possible Duplicate", a, Nothing, New EO.Web.MsgBoxButton("Yes", "", "yessubmit"), New EO.Web.MsgBoxButton("No", "", "nosubmit"))
+            MsgBox1.Show("Possible Duplicate", a, Nothing, New EO.Web.MsgBoxButton("Yes", "", "yessubmit"), New EO.Web.MsgBoxButton("No", "", "nosubmit"))
             Session.Remove("duporder")
 		Else 'no duplicates go on
-            InsertOrder()
-           
+			InsertOrder()
 		End If
 	End Sub
 	Protected Sub InsertOrder()
@@ -562,7 +558,7 @@ Partial Class ParentPayment
 		dsorders.InsertParameters.Add("@yr", ShopCart.yr)
 		Try
 			dsorders.Insert()
-            'SetTotal(ShopCart.OrderId) must be calle in databound
+            'SetTotal(ShopCart.OrderId)
 			Session("Cart") = ShopCart
 
 
@@ -604,7 +600,7 @@ Partial Class ParentPayment
 			'smtp.DeliveryMethod = SmtpDeliveryMethod.PickupDirectoryFromIis 'only works on some serves
 			smtp.Send(mail)
 
-            'MsgBox1.Show("Order Error", "There was an error placing your order. Please try again or contact your school advisor.", Nothing, New EO.Web.MsgBoxButton("OK", "", "updateerror"))
+			MsgBox1.Show("Order Error", "There was an error placing your order. Please try again or contact your school advisor.", Nothing, New EO.Web.MsgBoxButton("OK", "", "updateerror"))
 		End Try
 
 
@@ -631,43 +627,43 @@ Partial Class ParentPayment
 		Return retval.ToString.Trim
 	End Function
 	Protected Sub SetTotal(orderid As Integer)
-		Dim strconn As String
-		Dim total As Decimal
+        Dim strconn As String
+        Dim total As Decimal
 
 
         strconn = cus11.ConnectionString
-		Dim conn As MySqlConnection = New MySqlConnection(strconn)
-		Dim cmd As New MySqlCommand("", conn)
-		cmd.CommandText = "SELECT sum(itemtotal) FROM temporders where orderid=" & orderid & ";"
-		Try
-			cmd.Connection.Open()
-			total = cmd.ExecuteScalar()	'get the highest orderid in order table
-            lbltotal.Text = total
-			'txttotal.Text = total + 1	 Use in year 16 1 added per order for processing
-		Catch ex As Exception
-            lbltotal.Text = "0.00"   'all rows deleted returns dbnull
-		End Try
-	End Sub
-    Protected Sub TextBox1_TextChanged(sender As Object, e As System.EventArgs) Handles TextBox1.TextChanged
+        Dim conn As MySqlConnection = New MySqlConnection(strconn)
+        Dim cmd As New MySqlCommand("", conn)
+        cmd.CommandText = "SELECT sum(itemtotal) FROM temporders where orderid=" & orderid & ";"
         Try
-            If CInt(TextBox1.Text) < 1 Then
-                TextBox1.Text = 1
-            End If
-
+            cmd.Connection.Open()
+            total = cmd.ExecuteScalar() 'get the highest orderid in order table
+            lbltotal.Text = total
+            'txttotal.Text = total + 1	 Use in year 16 1 added per order for processing
         Catch ex As Exception
-            TextBox1.Text = 1
+            lbltotal.Text = "0.00"   'all rows deleted returns dbnull
         End Try
+	End Sub
+	Protected Sub TextBox1_TextChanged(sender As Object, e As System.EventArgs) Handles TextBox1.TextChanged
+		Try
+			If CInt(TextBox1.Text) < 1 Then
+				TextBox1.Text = 1
+			End If
+
+		Catch ex As Exception
+			TextBox1.Text = 1
+		End Try
 
 
 
-    End Sub
+	End Sub
 	
 	Protected Sub Button2_Click(sender As Object, e As System.EventArgs) Handles Button2.Click
-		'0,0=Browser
-		'01=platform
-		'02=  IP Address
-		'03= Pament Page first access Datetime
-		'04= submit button clicked Datetime
+        '0,0=Browser
+        '01=platform
+        '02=  IP Address
+        '03= Pament Page first access Datetime
+        '04= submit button clicked Datetime
         If lvItems.Items.Count > 0 Then
             If IsNothing(Session("updated")) Then
                 Try
@@ -774,17 +770,17 @@ Partial Class ParentPayment
 
 		Return retval
 	End Function
-    'Protected Sub MsgBox1_ButtonClick(sender As Object, e As System.Web.UI.WebControls.CommandEventArgs) Handles MsgBox1.ButtonClick
-    '	If e.CommandName = "updateerror" Then
-    '		Session.Clear()
-    '		Response.Redirect("http://www.memorybook.com/online-pay/")
-    '	End If
-    '	If e.CommandName = "yessubmit" Then	'add order to grid
-    '		InsertOrder()
-    '	End If
+	Protected Sub MsgBox1_ButtonClick(sender As Object, e As System.Web.UI.WebControls.CommandEventArgs) Handles MsgBox1.ButtonClick
+		If e.CommandName = "updateerror" Then
+			Session.Clear()
+			Response.Redirect("http://www.memorybook.com/online-pay/")
+		End If
+		If e.CommandName = "yessubmit" Then	'add order to grid
+			InsertOrder()
+		End If
 
 
-    'End Sub
+	End Sub
 	Protected Sub InsertSyslog(orderid As Integer)
 		'0,0=Browser
 		'01=platform
@@ -858,7 +854,7 @@ Partial Class ParentPayment
 	End Sub
 	Protected Sub dsorders_Deleted(sender As Object, e As System.Web.UI.WebControls.SqlDataSourceStatusEventArgs) Handles dsorders.Deleted
 		Dim ShopCart As Cart = Session("Cart")
-        'SetTotal(ShopCart.OrderId)
+
 		Session("Cart") = ShopCart
 	End Sub
 	Protected Sub ddlicon1_SelectedIndexChanged(sender As Object, e As System.EventArgs) Handles ddlicon1.SelectedIndexChanged
@@ -970,11 +966,8 @@ Partial Class ParentPayment
 
     Protected Sub lbltotal_init(sender As Object, e As EventArgs)
         lbltotal = sender
-       
+
     End Sub
   
-  
-  
-
 End Class
 

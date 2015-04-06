@@ -93,27 +93,27 @@ Namespace XC.Web
 			End If
 		End Sub
 
-		Public Sub HandleException(e As Exception)
-			If e.Message = "This is an invalid webresource request." Then
-				'don't do anything is a webcrawler don't want emails
-				Return
-			End If
-			Dim sExceptionDescription As String = FormatExceptionDescription(e)
+        Public Sub HandleException(ByVal e As Exception)
+            If e.Message = "This is an invalid webresource request." Then
+                'don't do anything is a webcrawler don't want emails
+                Return
+            End If
+            Dim sExceptionDescription As String = FormatExceptionDescription(e)
 
-			If (NotifyMode And UseFile) = UseFile Then
-				WriteToFile(sExceptionDescription)
-			End If
+            If (NotifyMode And UseFile) = UseFile Then
+                WriteToFile(sExceptionDescription)
+            End If
 
-			If (NotifyMode And UseEmail) = UseEmail Then
-				'email and write to file
-				SendEmail(sExceptionDescription)
-				WriteToFile(sExceptionDescription)
-			End If
+            If (NotifyMode And UseEmail) = UseEmail Then
+                'email and write to file
+                SendEmail(sExceptionDescription)
+                WriteToFile(sExceptionDescription)
+            End If
 
-			If (NotifyMode And UseEventLog) = UseEventLog Then
-				LogEvent(sExceptionDescription)
-			End If
-		End Sub
+            If (NotifyMode And UseEventLog) = UseEventLog Then
+                LogEvent(sExceptionDescription)
+            End If
+        End Sub
 
 		Protected Overridable Function FormatExceptionDescription(e As Exception) As String
 			Dim sb As New StringBuilder()

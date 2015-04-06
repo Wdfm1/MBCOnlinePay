@@ -47,9 +47,9 @@ Partial Class _Default1
 			'End If
 		End If
 
-		lblpaytype.Text = "Parent Payment Page"
-		h1.Text = "Parents should enter your code in the textbox below and click next to proceed. If you are a school, please visit the school page"
-		h1.NavigateUrl = "http://www.memorybook.com/online-pay/Default.aspx"
+		'lblpaytype.Text = "Parent Payment Page"
+		'h1.Text = "Parents should enter your code in the textbox below and click next to proceed. If you are a school, please visit the school page"
+		'h1.NavigateUrl = "http://www.memorybook.com/online-pay/Default.aspx"
 
 
 
@@ -102,7 +102,7 @@ Partial Class _Default1
 
 			If cschcode.Length = 5 Then
                 selectcmd = "SELECT cust.schname, schaddr, schaddr2, schcity,schstate, schzip," _
-                  & "schphone,cust.schcode, schfax,invno,basicinvamt,persinvamt,basiconly,yr,ponum,onlinecuto,picpers,picpersamt,inkpers,inktxt,inktxtamt,foilpers,inkpersamt,foilpersamt, foiltxtamt,foiltxt,luvlines,luvlineamt " _
+                  & "schphone,cust.schcode, schfax,invno,basicinvamt,persinvamt,basiconly,yr,ponum,onlinecuto,picpers,picpersamt,inkpers,inktxt,inktxtamt,foilpers,inkpersamt,foilpersamt, foiltxtamt,foiltxt " _
                   & "FROM cust left join invoiceinfo on cust.schcode=invoiceinfo.schcode WHERE invoiceinfo.invno=" & cschcode & ";"
 
 				Me.cus11.SelectCommand = selectcmd
@@ -134,8 +134,8 @@ Partial Class _Default1
 				Dim schzip As String = ""
 				Dim schcode As String = ""
 				Dim ponum As String = ""
-                Dim basicinvamt As String = "0"
-                Dim persinvamt As String = "0"
+				Dim basicinvamt As String = ""
+				Dim persinvamt As String = ""
 				Dim basiconly As Boolean = 1
 				Dim onlinecuto As Date = Today.Date
 				Dim yr As String = ""
@@ -144,13 +144,11 @@ Partial Class _Default1
 				Dim picpers As Boolean = 0
                 Dim foiltxt As Boolean = 0
                 Dim inktxt As Boolean = 0
-                Dim inkpersamt As String = "0"
-                Dim foilpersamt As String = "0"
-                Dim foiltxtamt As String = "0"
-                Dim inktxtamt As String = "0"
-                Dim picpersamt As String = "0"
-                Dim luvlines As Boolean = 0
-                Dim luvlineamt As String = "0"
+				Dim inkpersamt As String = ""
+				Dim foilpersamt As String = ""
+                Dim foiltxtamt As String = ""
+                Dim inktxtamt As String = ""
+				Dim picpersamt As String = ""
 				'Dim amount As Decimal = 0
 				Dim invno As String = ""
 				For Each drvSql In dvSql
@@ -163,11 +161,11 @@ Partial Class _Default1
 					schzip = drvSql("schzip").ToString
 					'below is an exception because the school sent the flyers out with old invoice number. Remove after year 15 is done.
 					If schcode = "107566" Then
-                        invno = "71966"
-                    ElseIf schcode = "094845" Then
+						invno = "71966"
+ ElseIf schcode = "094845" Then
                         invno = "72312"
-                    Else
-                        invno = drvSql("invno").ToString
+					Else
+						invno = drvSql("invno").ToString
 					End If
 
 					ponum = drvSql("ponum").ToString
@@ -178,7 +176,6 @@ Partial Class _Default1
 					foiltxtamt = drvSql("foiltxtamt").ToString
                     picpersamt = drvSql("picpersamt").ToString
                     inktxtamt = drvSql("inktxtamt").ToString
-                    luvlineamt = drvSql("luvlineamt")
 					Try
 						onlinecuto = drvSql("onlinecuto")
 					Catch ex As Exception
@@ -191,7 +188,6 @@ Partial Class _Default1
 						foiltxt = drvSql("foiltxt")
                         picpers = drvSql("picpers")
                         inktxt = drvSql("inktxt")
-                        luvlines = drvSql("luvlines")
 					Catch ex As Exception
 
 					End Try
@@ -224,8 +220,6 @@ Partial Class _Default1
                 ShopCart.foiltxt = foiltxt
                 ShopCart.inktxt = inktxt
                 ShopCart.inktxtamt = inktxtamt
-                ShopCart.LuvLine = luvlines
-                ShopCart.LuvLineAmt = luvlineamt
 				Session.Add("Cart", ShopCart)
 				Session.Add("schcode", schcode)
 
@@ -353,10 +347,5 @@ Partial Class _Default1
 
 
 	
-	Protected Sub lbspanish_Click(sender As Object, e As System.EventArgs) Handles lbspanish.Click
-		RequiredFieldValidator1.Enabled = False
-		Response.Redirect("~/SPAN_Default1.aspx")
-
-
-	End Sub
+	
 End Class

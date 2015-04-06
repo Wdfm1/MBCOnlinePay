@@ -1,4 +1,4 @@
-﻿@charset "utf-8";
+@charset "utf-8";
 /* CSS Document */
 #page {
 	width: 960px;
@@ -7,7 +7,6 @@
 	margin-bottom: 10px;
 	margin-left: auto;
 	z-index: 10;
-   
 }
 .header {
 	height: 120px;
@@ -56,9 +55,9 @@
 
 .orange_spacer {
 	width: 960px;
-	height: 20px;
+	height: 28px;
 	z-index: 44;
-	background-image: url('../images/swoosh_bgORANGE.png');
+	background-image: url(../images/swoosh_bgORANGE.png);
 }
 
 

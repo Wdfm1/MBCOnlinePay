@@ -62,7 +62,11 @@
 <div class="body_copy_container_FullwidthMOREPAD" style="padding-bottom:20px;padding-top:0px">
 <div id="wrapper1"> <font color="red"><%Response.Write(Session("defaulterrormessage"))%><br />
       </font></div>
-
+<div id="wrapper2">
+<%  If Session("custtype") =”parent” Then
+        Response.Write("<a style='color:blue' href='https://secure.memorybook.com/online-pay/SPAN_Default.aspx?paytype=parent'>(Para espa&ntilde;ol haga clic aqu&iacute;)</a>")
+        End If%>
+</div>
 
            
 <br />

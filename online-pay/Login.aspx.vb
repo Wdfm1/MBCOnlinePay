@@ -23,7 +23,7 @@ Partial Class Login
             dvSql = CType(Me.dslogin.Select(DataSourceSelectArguments.Empty), Data.DataView)
             If dvSql.Table.Rows.Count = 0 Then
                 e.Authenticated = False
-                Me.Login1.FailureText = "Your authenication failed. Please checke that the password and school code are correct."
+                Me.Login1.FailureText = "Your authenication failed. Please check that the password and school code are correct."
                 Return
             Else
                 For Each drvSql In dvSql
