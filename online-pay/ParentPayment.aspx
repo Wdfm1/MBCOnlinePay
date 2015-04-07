@@ -17,7 +17,7 @@
 
 <style type="text/css">
 .shoppingcart {border:2px solid #000;}
-        .shoppingcart .header{background-color:#800000;color:#ffffff;width:100%!important;height:auto!important;padding:5px 0px 5px 2px}
+        .shoppingcart .header{background-color:#7A090B;color:#ffffff;width:100%!important;height:auto!important;padding:5px 0px 5px 2px}
         .shoppingcart .header .column{float:left;width:120px;font-weight:bold;display:block }
         .shoppingcart .row{padding:3px;margin:0px !important}
         .shoppingcart .rowAlt{background-color:gainsboro;padding:3px;margin:0px !important}
@@ -181,7 +181,9 @@ and (max-device-width : 480px) {
 	padding-top:8px;
 	padding-bottom:8px;
 	font-family: "Open Sans", Arial, sans-serif;
-}
+        top: 0px;
+        left: 0px;
+    }
 .formCont30 {
 	padding-left:20px;
 	padding-top:8px;
