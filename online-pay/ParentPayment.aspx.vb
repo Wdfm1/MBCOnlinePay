@@ -486,7 +486,7 @@ Partial Class ParentPayment
 		dsorders.InsertParameters.Add("@yr", ShopCart.yr)
 		Try
 			dsorders.Insert()
-            'SetTotal(ShopCart.OrderId)
+
 			Session("Cart") = ShopCart
 
 
@@ -501,26 +501,26 @@ Partial Class ParentPayment
 			mail.To.Add("randy@woodalldevelopment.com")
 			'set the content
 			mail.Subject = "Mysql Error:Parent payment from " & lblschname.Text & "(" & ShopCart.schcode & ")"
-			mail.Body = "An error occured inserting a order record into the Mysql database server. The following data was not recorded in the payment table.<br/>" _
-			  & "School Name:" & lblschname.Text & "<br/>" _
-			  & "Student Name:" & studfname.Text & " " & studlname.Text & "<br/>" _
-			  & "School Code:" & ShopCart.schcode & "<br/>" _
-			   & "Orderid:" & ShopCart.OrderId & "<br/>" _
-			  & "Grade:" & ddlgrade.SelectedValue & "<br/>" _
-			  & "Teacher:" & teacher & "<br/>" _
-			  & "Book Type:" & basic.SelectedValue & "<br/>" _
-			  & "EmailAddress:" & txtcustemail.Text & "<br/>" _
-			  & "Perstext1:" & txtperstext1.Text & "<br/>" _
-			 & "Item Amount:" & itemamount & "<br/>" _
-			  & "Item Total:" & (CInt(TextBox1.Text) * CDec(itemamount)) & "<br/>" _
-			  & "Item Qty:" & TextBox1.Text & "<br/>" _
-			  & "ShipName:" & txtname.Text & "<br/>" _
-			  & "Ship Address:" & txtaddress.Text & "<br/>" _
-			   & "Ship City:" & txtcity.Text & "<br/>" _
-			 & "Ship State:" & ddlstate.SelectedValue & "<br/>" _
-			 & "Ship Zip:" & txtzip.Text & "<br/>" _
-			  & "Year:" & yr & "<br/><br/>" _
-			  & "Mysql Exception Code:" & ex.Message
+            mail.Body = "An error occured inserting a tmporder record into the Mysql database server. The following data was not recorded in the payment table.<br/>" _
+              & "School Name:" & lblschname.Text & "<br/>" _
+              & "Student Name:" & studfname.Text & " " & studlname.Text & "<br/>" _
+              & "School Code:" & ShopCart.schcode & "<br/>" _
+               & "Orderid:" & ShopCart.OrderId & "<br/>" _
+              & "Grade:" & ddlgrade.SelectedValue & "<br/>" _
+              & "Teacher:" & teacher & "<br/>" _
+              & "Book Type:" & basic.SelectedValue & "<br/>" _
+              & "EmailAddress:" & txtcustemail.Text & "<br/>" _
+              & "Perstext1:" & txtperstext1.Text & "<br/>" _
+             & "Item Amount:" & itemamount & "<br/>" _
+              & "Item Total:" & (CInt(TextBox1.Text) * CDec(itemamount)) & "<br/>" _
+              & "Item Qty:" & TextBox1.Text & "<br/>" _
+              & "ShipName:" & txtname.Text & "<br/>" _
+              & "Ship Address:" & txtaddress.Text & "<br/>" _
+               & "Ship City:" & txtcity.Text & "<br/>" _
+             & "Ship State:" & ddlstate.SelectedValue & "<br/>" _
+             & "Ship Zip:" & txtzip.Text & "<br/>" _
+              & "Year:" & yr & "<br/><br/>" _
+              & "Mysql Exception Code:" & ex.Message
 			mail.IsBodyHtml = True
 			'send the message
 			Dim smtp As New SmtpClient(ConfigurationManager.AppSettings("SmtpServer"))
