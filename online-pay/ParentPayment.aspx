@@ -356,7 +356,7 @@ Postal Code:<asp:TextBox ID="txtzip"
 
 <div class="formDivs" id="perstext" runat="server" visible="false">
                         Personalized Text&nbsp;&nbsp;<br />
-                            Line 1 Text</span>&nbsp;
+                            <span>Line 1 Text</span>&nbsp;
                             <asp:TextBox ID="txtperstext1" runat="server" MaxLength="29" 
                                 Width="300px" Enabled="False" ></asp:TextBox>
                                                    &nbsp; Choose &quot;Personalized YearBook&quot; From dropdown to enable.<br />

@@ -87,47 +87,14 @@ Partial Class ParentPayment
                 If ShopCart.luvline = True Then
                     Me.basic.Items.Add("LUVLINE")
                 End If
-                'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "HideContenta", "HideContent('perstext');", True)
-                perstext.Visible = True
 
-                ''code to call java script to hide/show divs
-                'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "HideContent1", "HideContent('perstext');", True) 'personalized text box 
-                'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "HideContent2", "HideContent('icontext');", True)
-                'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "HideContent3", "HideContent('icons');", True)
+                'perstext.Visible = True
+
+            
             Else 'or personalized
-                'If ShopCart.foilpers = True Then
-                '    Label15.Visible = True
-                'Else
-                '    Label15.Visible = False
-                'End If
+               
                 If ShopCart.picpers = True Then 'hide dropdowns________________
-                    'code to call java script to hide/show divs
-                    'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "HideContent", "HideContent('icontext');", True)
-                    'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "HideContent", "HideContent('icons');", True) 'personalized text box 
-
-                    'ddlicon1.Visible = False
-                    'ddlicon2.Visible = False
-                    'ddlicon3.Visible = False
-                    'ddlicon4.Visible = False
-                    'lblicon1.Visible = False
-                    'lblicon2.Visible = False
-                    'lblicon3.Visible = False
-                    'lblicon4.Visible = False
-                    'lblchooseicon.Visible = False
-                Else
-                    'code to call java script to hide/show divs
-                    'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "ShowContent1", "ShowContent('icontext');", True)
-                    'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "ShowContent2", "ShowContent('icons');", True)
-                    'lblchooseicon.Visible = True
-                    'Label16.Visible = False
-                    'ddlicon1.Visible = True
-                    'ddlicon2.Visible = True
-                    'ddlicon3.Visible = True
-                    'ddlicon4.Visible = True
-                    'lblicon1.Visible = True
-                    'lblicon2.Visible = True
-                    'lblicon3.Visible = True
-                    'lblicon4.Visible = True
+              
                 End If
                 Me.basic.Items.Add("YEARBOOK")
                 Me.basic.SelectedValue = "YEARBOOK"
@@ -136,66 +103,27 @@ Partial Class ParentPayment
                 End If
                 If ShopCart.inkpers Then
                     Me.basic.Items.Add("PERSONALIZED INK YEARBOOK")
-                    'txtperstext1.Enabled = True
+
                 ElseIf ShopCart.foilpers Then
                     Me.basic.Items.Add("PERSONALIZED FOIL YEARBOOK")
-                    'txtperstext1.Enabled = True
+
                 ElseIf ShopCart.picpers Then
-                    'txtperstext1.Enabled = False
+
                     Me.basic.Items.Add("PERSONALIZED PICTURE YEARBOOK")
                 ElseIf ShopCart.foiltxt Then
                     Me.basic.Items.Add("PERSONALIZED YEARBOOK")
-                    'code to call java script to hide/show divs
-                    'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "HideContent", "HideContent('icontext');", True)
-                    'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "HideContent", "HideContent('icons');", True)
-                    'ddlicon1.Visible = False
-                    'ddlicon2.Visible = False
-                    'ddlicon3.Visible = False
-                    'ddlicon4.Visible = False
-                    'lblicon1.Visible = False
-                    'lblicon2.Visible = False
-                    'lblicon3.Visible = False
-                    'lblicon4.Visible = False
-                    'lblchooseicon.Visible = False
-                    'Label15.Visible = False
+                   
                 ElseIf ShopCart.inktxt Then
                     Me.basic.Items.Add("PERSONALIZED YEARBOOKS")
-                    'code to call java script to hide/show divs
-                    'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "HideContent", "HideContent('icontext');", True)
-                    'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "HideContent", "HideContent('icons');", True)
-                    'ddlicon1.Visible = False
-                    'ddlicon2.Visible = False
-                    'ddlicon3.Visible = False
-                    'ddlicon4.Visible = False
-                    'lblicon1.Visible = False
-                    'lblicon2.Visible = False
-                    'lblicon3.Visible = False
-                    'lblicon4.Visible = False
-                    'lblchooseicon.Visible = False
-                    'Label15.Visible = False
+                    
                
 
                 Else   'personal with out icons	(this line for schools that booked before the foil with out icon line was put in. Take out after year 15)
                     Me.basic.Items.Add("PERSONALIZED_YEARBOOK")
-                    'code to call java script to hide/show divs
-                    'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "HideContent", "HideContent('icontext');", True)
-                    'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "HideContent", "HideContent('icons');", True)
-                    'ddlicon1.Visible = False
-                    'ddlicon2.Visible = False
-                    'ddlicon3.Visible = False
-                    'ddlicon4.Visible = False
-                    'lblicon1.Visible = False
-                    'lblicon2.Visible = False
-                    'lblicon3.Visible = False
-                    'lblicon4.Visible = False
-                    'lblchooseicon.Visible = False
-                    'Label15.Visible = False
+                    
                 End If
 
-                'code to call java script to hide/show divs
-                'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "ShowContent", "ShowContent('perstext');", True)
-                'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "ShowContent", "ShowContent('icontext');", True)
-                'ScriptManager.RegisterStartupScript(Me, Me.GetType(), "ShowContent", "ShowContent('icons');", True)
+               
 
 
             End If
