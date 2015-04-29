@@ -114,7 +114,8 @@ Partial Class Admin_Administration
 
         Dim time As TimeSpan = Date.Now.TimeOfDay
         'type determine if email is sent when receipt page is accessed 1=email 0=noemail
-        Response.Redirect("~/receipt.aspx?orderid=" & lborderid.Text & "&type=0&secval=" & time.ToString)
+        Response.Redirect("https://www.securepaymentportal.com/MBCSecure/receipt.aspx?orderid=" & lborderid.Text)
+        'https://www.securepaymentportal.com/MBCSecure/receipt.aspx?
     End Sub
 
     Protected Sub GridView1_RowDataBound(sender As Object, e As System.Web.UI.WebControls.GridViewRowEventArgs) Handles GridView1.RowDataBound
